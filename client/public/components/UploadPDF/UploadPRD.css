@@ -1,0 +1,64 @@
+.uploadPage8271 {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #f5f5f5;
+}
+
+.uploadCard8271 {
+  width: 500px;
+
+  padding: 30px;
+
+  background: white;
+
+  border-radius: 10px;
+
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.15);
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+.uploadCard8271 h1 {
+  text-align: center;
+}
+
+.uploadCard8271 p {
+  text-align: center;
+}
+
+.uploadCard8271 input {
+  padding: 10px;
+}
+
+.fileName8271 {
+  color: green;
+  font-weight: bold;
+}
+
+.uploadCard8271 button {
+  padding: 12px;
+
+  border: none;
+
+  cursor: pointer;
+
+  background: #1976d2;
+
+  color: white;
+
+  border-radius: 6px;
+
+  font-size: 16px;
+}
+
+.uploadCard8271 button:hover {
+  background: #135ba1;
+}

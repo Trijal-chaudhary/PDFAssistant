@@ -1,0 +1,14 @@
+#backend
+
+Backend/node_modules/
+
+# frontend
+
+frontend/node_modules/
+frontend/dist/
+
+# Python
+pythonService/venv/
+pythonService/__pycache__/
+pythonService/chroma_db/
+pythonService/*.pyc
