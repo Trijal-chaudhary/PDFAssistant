@@ -1,14 +1,14 @@
 #backend
 
-Backend/node_modules/
+server/node_modules/
 
 # frontend
 
-frontend/node_modules/
-frontend/dist/
+client/node_modules/
+client/dist/
 
 # Python
 pythonService/venv/
 pythonService/__pycache__/
-pythonService/chroma_db/
+pythonService/chromadb/
 pythonService/*.pyc
