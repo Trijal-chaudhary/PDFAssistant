@@ -1,14 +1,14 @@
-#backend
-
+# Node
 server/node_modules/
-
-# frontend
-
 client/node_modules/
-client/dist/
 
 # Python
 pythonService/venv/
 pythonService/__pycache__/
-pythonService/chromadb/
 pythonService/*.pyc
+
+# ChromaDB
+pythonService/chromadb/
+
+# Uploaded PDFs
+server/upload/
