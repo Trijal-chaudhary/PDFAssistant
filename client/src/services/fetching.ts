@@ -6,3 +6,10 @@ export const uploadPdf = async (data : FormData) =>{
   })
   return response.json();
 }
+export const sendMessage = async (data : any) =>{
+  const response = await fetch(`${backend}/api/ask_pdf`, {
+    method:"POST",
+    body : data
+  })
+  return response.json();
+}

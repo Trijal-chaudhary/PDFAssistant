@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import postPdfuploadRouter from './Routers/pdf.router';
+import {postMessageRouter, postPdfuploadRouter} from './Routers/pdf.router';
 
 const app = express();
 
@@ -10,6 +10,7 @@ app.use(cors({
 }))
 
 app.use('/api/pdf_upload', postPdfuploadRouter);
+app.use('/api/ask_pdf', postMessageRouter);
 
 const PORT = 3002;
 app.listen(PORT, ()=>{

@@ -1,9 +1,11 @@
 import express from "express";
-import { postPdfupload } from "../controllers/pdf.controller";
+import { postMessage, postPdfupload } from "../controllers/pdf.controller";
 import uploadPDF from "../middlewares/multerStorage";
 
 const postPdfuploadRouter = express.Router();
+const postMessageRouter = express.Router();
 
 postPdfuploadRouter.post('/',uploadPDF.any(), postPdfupload);
+postMessageRouter.post('/', postMessage);
 
-export default postPdfuploadRouter;
+export {postPdfuploadRouter,postMessageRouter}

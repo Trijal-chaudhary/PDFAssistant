@@ -17,3 +17,7 @@ export const postPdfupload = async (req :Request , res :Response)=>{
     res.status(500).json({message : error});
   }
 }
+export const postMessage = async (req :Request, res : Response)=>{
+  // console.log
+  res.status(200).json({mess :"everything is ok"});
+}

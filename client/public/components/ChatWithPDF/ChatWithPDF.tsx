@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './ChatWithPDF.css'
+import { sendMessage } from '../../../src/services/fetching';
 interface Message{
   sender : "ai" | "user",
   text : string
@@ -13,11 +14,13 @@ const ChatWithPDF = () => {
     }
   ])
 
-  function handleSend() {
+  async function handleSend() {
 
     if (!question.trim()) return;
-
+    const res = await sendMessage(question);
+    console.log(res);
     // Add user's question.
+
     setMessages((prev) => [
       ...prev,
       {

@@ -51,11 +51,11 @@ def PdfUpload(data : PdfUrl):
     documents=chunkOut,
     metadatas=metadata
   )
-  # data = collection.get()
-  # print(data)
-  # for ch in chunkOut:
-  #   print(ch)
-  #   print('......')
+  data = collection.get()
+  print(data)
+  for ch in chunkOut:
+    print(ch)
+    print('......')
   return {
     "message" :"stored"
   }
