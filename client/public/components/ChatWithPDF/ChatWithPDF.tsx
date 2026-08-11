@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import './ChatWithPDF.css'
 import { sendMessage } from '../../../src/services/fetching';
 interface Message{

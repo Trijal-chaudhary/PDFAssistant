@@ -16,6 +16,8 @@ app = FastAPI()
 class PdfUrl(BaseModel):
   url : str
 
+class Message(BaseModel):
+  mess : str
 
 def chunking(text, size, overlaps):
   chunk = []
@@ -59,3 +61,8 @@ def PdfUpload(data : PdfUrl):
   return {
     "message" :"stored"
   }
+
+@app.post('/pdf/chat')
+def PdfChat(mess : Message):
+  print(mess)
+  return {"message" : "okey"}

@@ -18,6 +18,19 @@ export const postPdfupload = async (req :Request , res :Response)=>{
   }
 }
 export const postMessage = async (req :Request, res : Response)=>{
-  // console.log
+  console.log(req.body.mess);
+  try {
+    const response = await fetch('http://localhost:8000/pdf/chat',  {
+      method :"POST",
+      headers : {
+        "Content-Type" : "application/json"
+      },
+      body : JSON.stringify(req.body)
+    })
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.log(error);
+  }
   res.status(200).json({mess :"everything is ok"});
 }
