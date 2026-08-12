@@ -12,3 +12,5 @@ pythonService/chromadb/
 
 # Uploaded PDFs
 server/upload/
+
+server/.env

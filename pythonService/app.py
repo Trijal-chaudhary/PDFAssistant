@@ -65,4 +65,9 @@ def PdfUpload(data : PdfUrl):
 @app.post('/pdf/chat')
 def PdfChat(mess : Message):
   print(mess)
-  return {"message" : "okey"}
+  result = collection.query(
+    query_texts=[mess.mess],
+    n_results=2
+  )
+  print(result)
+  return {"data" : result}

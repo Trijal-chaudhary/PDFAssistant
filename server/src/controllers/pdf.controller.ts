@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-
+import{ ai }from "../config/gemini"
 export const postPdfupload = async (req :Request , res :Response)=>{
   try {
     const files = req.files as Express.Multer.File[];
@@ -28,7 +28,13 @@ export const postMessage = async (req :Request, res : Response)=>{
       body : JSON.stringify(req.body)
     })
     const data = await response.json();
-    console.log(data);
+    console.log(data.data.documents);
+    const prompt = req.body.mess + data.data.documents;
+    const resp = await ai.models.generateContent({
+      model : "gemini-2.5-flash",
+      contents : prompt
+    })
+    console.log(resp.text);
   } catch (error) {
     console.log(error);
   }

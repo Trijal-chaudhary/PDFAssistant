@@ -1,5 +1,7 @@
 import express from 'express';
 import cors from 'cors';
+// import dot
+import "dotenv/config";
 import {postMessageRouter, postPdfuploadRouter} from './Routers/pdf.router';
 
 const app = express();
